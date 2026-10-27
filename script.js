@@ -182,6 +182,20 @@ const projectData = {
     images: [
       { src: 'Gambar/Projects Section/Project 3/Netflix Movies & TV Shows Content Analysis/Netflix Executive Dashboard.png', alt: 'Netflix Executive Dashboard' },
     ]
+  },
+  4: {
+    title: 'Global AI Adoption & Workforce Impact Analysis (2020–2026) — Project Gallery',
+    images: [
+      { src: 'Gambar/Projects Section/Project 4/Global AI Adoption & Workforce Impact Analysis (2020–2026)/1.png', alt: 'Global AI Adoption — Slide 1' },
+      { src: 'Gambar/Projects Section/Project 4/Global AI Adoption & Workforce Impact Analysis (2020–2026)/2.png', alt: 'Global AI Adoption — Slide 2' },
+      { src: 'Gambar/Projects Section/Project 4/Global AI Adoption & Workforce Impact Analysis (2020–2026)/3.png', alt: 'Global AI Adoption — Slide 3' },
+      { src: 'Gambar/Projects Section/Project 4/Global AI Adoption & Workforce Impact Analysis (2020–2026)/4.png', alt: 'Global AI Adoption — Slide 4' },
+      { src: 'Gambar/Projects Section/Project 4/Global AI Adoption & Workforce Impact Analysis (2020–2026)/5.png', alt: 'Global AI Adoption — Slide 5' },
+      { src: 'Gambar/Projects Section/Project 4/Global AI Adoption & Workforce Impact Analysis (2020–2026)/6.png', alt: 'Global AI Adoption — Slide 6' },
+      { src: 'Gambar/Projects Section/Project 4/Global AI Adoption & Workforce Impact Analysis (2020–2026)/7.png', alt: 'Global AI Adoption — Slide 7' },
+      { src: 'Gambar/Projects Section/Project 4/Global AI Adoption & Workforce Impact Analysis (2020–2026)/8.png', alt: 'Global AI Adoption — Slide 8' },
+      { src: 'Gambar/Projects Section/Project 4/Global AI Adoption & Workforce Impact Analysis (2020–2026)/9.png', alt: 'Global AI Adoption — Slide 9' },
+    ]
   }
 };
 
