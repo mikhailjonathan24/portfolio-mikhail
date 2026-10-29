@@ -196,6 +196,13 @@ const projectData = {
       { src: 'Gambar/Projects Section/Project 4/Global AI Adoption & Workforce Impact Analysis (2020–2026)/8.png', alt: 'Global AI Adoption — Slide 8' },
       { src: 'Gambar/Projects Section/Project 4/Global AI Adoption & Workforce Impact Analysis (2020–2026)/9.png', alt: 'Global AI Adoption — Slide 9' },
     ]
+  },
+  5: {
+    title: 'Retail Sales & Customer Intelligence Dashboard — Project Gallery',
+    url: 'https://datastudio.google.com/reporting/ddc4b016-cc34-4267-8470-75003b88c5e4',
+    images: [
+      { src: 'Gambar/Projects Section/Project 5/Retail Sales & Customer Intelligence Dashboard/1.png', alt: 'Retail Sales & Customer Intelligence Dashboard' },
+    ]
   }
 };
 
