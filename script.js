@@ -203,6 +203,13 @@ const projectData = {
     images: [
       { src: 'Gambar/Projects Section/Project 5/Retail Sales & Customer Intelligence Dashboard/1.png', alt: 'Retail Sales & Customer Intelligence Dashboard' },
     ]
+  },
+  6: {
+    title: 'Supply Chain & Inventory Analytics — Project Gallery',
+    url: 'https://mikhailjonathan24.github.io/supply-chain-analytics/',
+    images: [
+      { src: 'Gambar/Projects Section/Project 6/Supply Chain & Inventory Analytics/1.png', alt: 'Supply Chain & Inventory Analytics' },
+    ]
   }
 };
 
