@@ -210,6 +210,13 @@ const projectData = {
     images: [
       { src: 'Gambar/Projects Section/Project 6/Supply Chain & Inventory Analytics/1.png', alt: 'Supply Chain & Inventory Analytics' },
     ]
+  },
+  7: {
+    title: 'Spotify Audio Trends & Popularity Dashboard — Project Gallery',
+    url: 'https://mikhailjonathan24.github.io/spotify-data-analysis/',
+    images: [
+      { src: 'Gambar/Projects Section/Project 7/Spotify Songs Analysis/Spotify Dashboard.png', alt: 'Spotify Songs Analysis Dashboard' },
+    ]
   }
 };
 
