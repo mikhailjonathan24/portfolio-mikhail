@@ -36,15 +36,9 @@ function applyTheme(theme) {
   }
 }
 
-// Initialise from localStorage (or system preference as fallback)
+// Start in light mode unless the user has explicitly selected a theme.
 const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  applyTheme(savedTheme);
-} else {
-  // Respect the user's OS preference
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(prefersDark ? 'dark' : 'light');
-}
+applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
 
 // Toggle on button click
 themeToggle.addEventListener('click', () => {
@@ -275,6 +269,7 @@ const modalGallery   = document.getElementById('modalGallery');
 const modalTitle     = document.getElementById('modalTitle');
 const modalLinkWrap  = document.getElementById('modalLinkWrap');
 const modalLink      = document.getElementById('modalLink');
+const modalLinkText  = document.getElementById('modalLinkText');
 const projectCards   = document.querySelectorAll('.project-card');
 
 /**
@@ -346,6 +341,25 @@ const projectData = {
     images: [
       { src: 'Gambar/Projects Section/Project 7/Spotify Songs Analysis/Spotify Dashboard.png', alt: 'Spotify Songs Analysis Dashboard' },
     ]
+  },
+  8: {
+    title: 'FMCG Promotional & Sales Performance Analysis — Project Gallery',
+    url: 'https://datastudio.google.com/reporting/0669910b-c4e5-4b9d-ba4d-e76643d5e0d9',
+    images: [
+      { src: 'Gambar/Projects Section/Project 8/FMCG Promotional & Sales Performance Analysis/Dashboard Penjualan FMCG 2025.png', alt: 'FMCG Promotional & Sales Performance Dashboard for 2025' },
+    ]
+  },
+  9: {
+    title: 'Retail Sales & Target KPI Tracking Dashboard — Project Gallery',
+    document: 'Gambar/Projects Section/Project 9/Retail Sales & Target KPI Tracking Dashboard/Retail Sales KPI Dashboard_Mikhail Jonathan.pdf',
+    linkLabel: 'Open Project PDF',
+    images: []
+  },
+  10: {
+    title: 'KarirNex Mart Sales & Profitability Performance — Project Gallery',
+    document: 'Gambar/Projects Section/Project 10/KarirNex Mart Sales & Profitability Performance/KarirNex Mart - 2025 Sales Performance.pdf',
+    linkLabel: 'Open Project PDF',
+    images: []
   }
 };
 
@@ -355,16 +369,21 @@ function loadModalContent(projectId) {
   if (!data) return;
 
   modalTitle.textContent = data.title;
-  modalGallery.innerHTML = data.images
+  const imageMarkup = data.images
     .map(img =>
       `<img src="${img.src}" alt="${img.alt}"
         class="w-full rounded-xl border border-slate-200 dark:border-slate-600 shadow object-contain bg-slate-50 dark:bg-slate-700/30" />`
-    )
-    .join('');
+    ).join('');
+  const documentMarkup = data.document
+    ? `<iframe src="${data.document}#toolbar=1&navpanes=0&view=FitH" title="${data.title}" class="h-[70vh] min-h-[24rem] w-full rounded-xl border border-slate-200 bg-white dark:border-slate-600" loading="lazy"></iframe>`
+    : '';
+  modalGallery.innerHTML = `${imageMarkup}${documentMarkup}`;
 
   // Show or hide the live link button
-  if (data.url) {
-    modalLink.href = data.url;
+  const link = data.url || data.document;
+  if (link) {
+    modalLink.href = link;
+    modalLinkText.textContent = data.linkLabel || 'Open Live Dashboard';
     modalLinkWrap.classList.remove('hidden');
   } else {
     modalLinkWrap.classList.add('hidden');
