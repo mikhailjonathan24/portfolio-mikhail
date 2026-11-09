@@ -54,6 +54,135 @@ themeToggle.addEventListener('click', () => {
   localStorage.setItem('theme', next);
 });
 
+/* ─────────────────────────────────────────────────────────────
+   1A. HERO ORBIT — INTERACTIVE ANALYTICS STEPS
+────────────────────────────────────────────────────────────── */
+const orbitVisual = document.querySelector('.hero-visual');
+const orbitCards = orbitVisual ? [...orbitVisual.querySelectorAll('[data-orbit]')] : [];
+const orbitConnections = orbitVisual ? [...orbitVisual.querySelectorAll('[data-connection]')] : [];
+const orbitDetailTitle = orbitVisual?.querySelector('.orbit-detail-title');
+const orbitDetailText = orbitVisual?.querySelector('.orbit-detail-text');
+const orbitSteps = {
+  analyze: {
+    title: 'Start with the signal.',
+    text: 'I clean, process, and query raw datasets using SQL and Python to extract hidden patterns.'
+  },
+  visualize: {
+    title: 'Make the insight clear.',
+    text: 'I transform complex metrics into intuitive, interactive dashboards using Power BI and Tableau.'
+  },
+  deliver: {
+    title: 'Connect insight to impact.',
+    text: 'I translate analytical findings into clear insights to drive strategic business decisions.'
+  },
+  explore: {
+    title: 'Ask better questions.',
+    text: 'I approach every problem with business curiosity, defining clear questions before diving into data.'
+  }
+};
+
+function updateOrbitConnections() {
+  if (!orbitVisual) return;
+
+  const visualRect = orbitVisual.getBoundingClientRect();
+  const centerRect = orbitVisual.querySelector('.orbit-center').getBoundingClientRect();
+  const center = {
+    x: centerRect.left - visualRect.left + centerRect.width / 2,
+    y: centerRect.top - visualRect.top + centerRect.height / 2
+  };
+  const radius = centerRect.width / 2;
+
+  orbitConnections.forEach(path => {
+    const card = orbitCards.find(item => item.dataset.orbit === path.dataset.connection);
+    if (!card) return;
+
+    const cardRect = card.getBoundingClientRect();
+    const marker = getComputedStyle(card, '::after');
+    const markerSize = parseFloat(marker.width);
+    const markerLeft = marker.left === 'auto'
+      ? cardRect.width - parseFloat(marker.right) - markerSize
+      : parseFloat(marker.left);
+    const markerTop = marker.top === 'auto'
+      ? cardRect.height - parseFloat(marker.bottom) - markerSize
+      : parseFloat(marker.top);
+    const scaleX = cardRect.width / card.offsetWidth;
+    const scaleY = cardRect.height / card.offsetHeight;
+    const target = {
+      x: cardRect.left - visualRect.left + (markerLeft + markerSize / 2) * scaleX,
+      y: cardRect.top - visualRect.top + (markerTop + markerSize / 2) * scaleY
+    };
+    const direction = {
+      x: target.x - center.x,
+      y: target.y - center.y
+    };
+    const distance = Math.hypot(direction.x, direction.y);
+    const start = {
+      x: center.x + direction.x / distance * (radius + 2),
+      y: center.y + direction.y / distance * (radius + 2)
+    };
+
+    path.setAttribute('pathLength', '1');
+    path.setAttribute('d', `M ${start.x} ${start.y} L ${target.x} ${target.y}`);
+  });
+}
+
+if (orbitVisual) {
+  const orbitResizeObserver = new ResizeObserver(updateOrbitConnections);
+  orbitResizeObserver.observe(orbitVisual);
+  orbitCards.forEach(card => orbitResizeObserver.observe(card));
+  window.addEventListener('resize', updateOrbitConnections, { passive: true });
+  updateOrbitConnections();
+}
+
+function setActiveOrbitStep(step) {
+  if (!orbitVisual || !orbitSteps[step]) return;
+
+  orbitVisual.classList.add('has-active-orbit');
+  orbitConnections.forEach(path => {
+    path.classList.remove('is-active');
+    if (path.dataset.connection === step) {
+      path.classList.add('is-active');
+    }
+  });
+  orbitCards.forEach(card => {
+    const isActive = card.dataset.orbit === step;
+    card.classList.toggle('is-active', isActive);
+    card.setAttribute('aria-pressed', String(isActive));
+  });
+  orbitVisual.querySelector('.orbit-inner').classList.add('is-active');
+  orbitDetailTitle.textContent = orbitSteps[step].title;
+  orbitDetailText.textContent = orbitSteps[step].text;
+  updateOrbitConnections();
+}
+
+function clearActiveOrbitStep() {
+  if (!orbitVisual) return;
+
+  orbitVisual.classList.remove('has-active-orbit');
+  orbitConnections.forEach(path => path.classList.remove('is-active'));
+  orbitCards.forEach(card => {
+    card.classList.remove('is-active');
+    card.setAttribute('aria-pressed', 'false');
+  });
+  orbitVisual.querySelector('.orbit-inner').classList.remove('is-active');
+  orbitDetailTitle.textContent = 'Curiosity, backed by data.';
+  orbitDetailText.textContent = 'Hover over a step to see how I turn questions into useful insights.';
+}
+
+orbitCards.forEach(card => {
+  card.addEventListener('pointerenter', () => setActiveOrbitStep(card.dataset.orbit));
+  card.addEventListener('pointerleave', () => {
+    if (!card.matches(':focus')) clearActiveOrbitStep();
+  });
+  card.addEventListener('focus', () => setActiveOrbitStep(card.dataset.orbit));
+  card.addEventListener('blur', () => {
+    if (!card.matches(':hover')) clearActiveOrbitStep();
+  });
+  card.addEventListener('click', () => {
+    if (card.matches(':focus')) setActiveOrbitStep(card.dataset.orbit);
+  });
+});
+
 
 /* ─────────────────────────────────────────────────────────────
    2. MOBILE HAMBURGER MENU

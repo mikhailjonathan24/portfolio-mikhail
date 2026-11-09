@@ -21,8 +21,8 @@
         extend: {
           fontFamily: { sans: ['Inter', 'sans-serif'] },
           colors: {
-            primary: { DEFAULT: '#2563EB', light: '#38BDF8' },
-            accent:  { DEFAULT: '#0D9488', light: '#10B981' }
+            primary: { DEFAULT: '#2f6690', light: '#81c3d7' },
+            accent:  { DEFAULT: '#16425b', light: '#3a7ca5' }
           }
         }
       }
@@ -38,30 +38,31 @@
   <!-- ============================================================
        NAVBAR
   ============================================================ -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 transition-all duration-300">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/85 dark:bg-slate-950/85 backdrop-blur-xl border-b border-slate-200/70 dark:border-slate-700/70 transition-all duration-300">
+    <div class="max-w-screen-2xl mx-auto px-5 sm:px-10 lg:px-16 xl:px-24">
+      <div class="flex items-center justify-between h-[4.5rem]">
 
         <!-- Logo -->
-        <a href="#hero" class="flex items-center gap-2 shrink-0">
-          <img src="Gambar/Branding/MJMP.png" alt="MJMP Logo" class="h-9 w-auto object-contain" />
+        <a href="#hero" class="flex items-center gap-2.5 shrink-0">
+          <img src="Gambar/Branding/MJMP.png" alt="" class="h-9 w-auto object-contain" />
+          <span class="text-sm font-bold tracking-tight text-slate-900 dark:text-white">Mikhail Jonathan<span class="text-[#2f6690] dark:text-[#81c3d7]">.</span></span>
         </a>
 
         <!-- Desktop Nav Links -->
-        <ul class="hidden md:flex items-center gap-1 text-sm font-medium">
-          <li><a href="#about"        class="nav-link px-3 py-1.5 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">About</a></li>
-          <li><a href="#education"    class="nav-link px-3 py-1.5 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Education</a></li>
-          <li><a href="#organization" class="nav-link px-3 py-1.5 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Experience</a></li>
-          <li><a href="#projects"     class="nav-link px-3 py-1.5 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Projects</a></li>
-          <li><a href="#skills"       class="nav-link px-3 py-1.5 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Skills</a></li>
-          <li><a href="#contact"      class="nav-link px-3 py-1.5 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Contact</a></li>
+        <ul class="hidden md:flex items-center gap-1 text-[13px] font-medium text-slate-600 dark:text-slate-300">
+          <li><a href="#about"        class="nav-link px-3 py-2 rounded-full hover:bg-[#f0f7fa] dark:hover:bg-slate-800 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">About</a></li>
+          <li><a href="#education"    class="nav-link px-3 py-2 rounded-full hover:bg-[#f0f7fa] dark:hover:bg-slate-800 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Education</a></li>
+          <li><a href="#organization" class="nav-link px-3 py-2 rounded-full hover:bg-[#f0f7fa] dark:hover:bg-slate-800 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Experience</a></li>
+          <li><a href="#projects"     class="nav-link px-3 py-2 rounded-full hover:bg-[#f0f7fa] dark:hover:bg-slate-800 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Projects</a></li>
+          <li><a href="#skills"       class="nav-link px-3 py-2 rounded-full hover:bg-[#f0f7fa] dark:hover:bg-slate-800 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Skills</a></li>
+          <li><a href="#contact"      class="nav-link px-3 py-2 rounded-full hover:bg-[#f0f7fa] dark:hover:bg-slate-800 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Contact</a></li>
         </ul>
 
         <!-- Right Controls -->
         <div class="flex items-center gap-3">
           <!-- Dark/Light Toggle -->
           <button id="themeToggle" aria-label="Toggle dark/light mode"
-            class="p-2 rounded-full border border-slate-200 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors text-slate-600 dark:text-slate-300">
+            class="p-2 rounded-full border border-slate-200 dark:border-slate-700 hover:bg-[#f0f7fa] dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
             <!-- Sun icon (shown in dark mode) -->
             <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
@@ -79,62 +80,102 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
-        </div>
+        </button>
       </div>
     </div>
 
     <!-- Mobile Menu Dropdown -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 space-y-1 text-sm font-medium">
-      <a href="#about"        class="block px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">About</a>
-      <a href="#education"    class="block px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Education</a>
-      <a href="#organization" class="block px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Experience</a>
-      <a href="#projects"     class="block px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Projects</a>
-      <a href="#skills"       class="block px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Skills</a>
-      <a href="#contact"      class="block px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Contact</a>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 space-y-1 text-sm font-medium">
+      <a href="#about"        class="block px-3 py-2 rounded-lg hover:bg-[#f0f7fa] dark:hover:bg-slate-700 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">About</a>
+      <a href="#education"    class="block px-3 py-2 rounded-lg hover:bg-[#f0f7fa] dark:hover:bg-slate-700 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Education</a>
+      <a href="#organization" class="block px-3 py-2 rounded-lg hover:bg-[#f0f7fa] dark:hover:bg-slate-700 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Experience</a>
+      <a href="#projects"     class="block px-3 py-2 rounded-lg hover:bg-[#f0f7fa] dark:hover:bg-slate-700 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Projects</a>
+      <a href="#skills"       class="block px-3 py-2 rounded-lg hover:bg-[#f0f7fa] dark:hover:bg-slate-700 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Skills</a>
+      <a href="#contact"      class="block px-3 py-2 rounded-lg hover:bg-[#f0f7fa] dark:hover:bg-slate-700 hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Contact</a>
     </div>
   </nav>
 
   <!-- ============================================================
        HERO SECTION
   ============================================================ -->
-  <section id="hero" class="min-h-screen flex items-center pt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid md:grid-cols-2 gap-12 items-center">
-      <!-- Text Content -->
-      <div class="order-2 md:order-1 space-y-6 fade-in">
-        <span class="inline-block text-xs font-semibold tracking-widest text-teal-600 dark:text-teal-400 uppercase border border-teal-200 dark:border-teal-700 bg-teal-50 dark:bg-teal-900/30 px-3 py-1 rounded-full">Open to Internship Opportunities</span>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-slate-900 dark:text-white">
-          Hi, I'm <span class="text-blue-600 dark:text-sky-400">Jonathan</span> 👋
-        </h1>
-        <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-lg">
-          An <span class="font-semibold text-blue-600 dark:text-sky-400">Informatics Engineering</span> student aspiring to become a <span class="font-semibold text-teal-600 dark:text-teal-400">Data Analyst</span> — driven by a passion for transforming raw data into actionable insights using <span class="font-semibold text-blue-600 dark:text-sky-400">Python</span>, <span class="font-semibold text-blue-600 dark:text-sky-400">SQL</span>, and modern BI tools.
-        </p>
-        <div class="flex flex-wrap gap-3 pt-2">
-          <a href="#projects" class="btn-primary inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-sm shadow-md shadow-blue-200 dark:shadow-none transition-all duration-300 hover:-translate-y-0.5">
-            View Projects
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-          </a>
-          <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 border-2 border-blue-600 dark:border-sky-400 text-blue-600 dark:text-sky-400 rounded-xl font-semibold text-sm hover:bg-blue-600 dark:hover:bg-sky-400 hover:text-white dark:hover:text-slate-900 transition-all duration-300 hover:-translate-y-0.5">
-            Contact Me
-          </a>
-          <!-- Download CV Button -->
-          <a href="CV Mikhail Jonathan/Data Analyst Intern - Mikhail Jonathan.pdf" download="Data Analyst Intern - Mikhail Jonathan.pdf"
-            class="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-xl font-semibold text-sm shadow-md shadow-teal-200 dark:shadow-none transition-all duration-300 hover:-translate-y-0.5">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-            Download CV
-          </a>
+  <section id="hero" class="hero-section">
+    <div class="hero-inner max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-24">
+      <div class="hero-main">
+        <div class="hero-copy fade-in">
+          <span class="hero-eyebrow"><span class="hero-eyebrow-dot"></span> Data analytics portfolio</span>
+          <h1 class="hero-title">
+            Turning data<br />
+            into <span>clearer</span><br />
+            decisions.
+          </h1>
+          <p class="hero-description">
+            Hi, I’m Mikhail Jonathan — an Informatics Engineering student and aspiring Data Analyst, turning complex data into insights people can act on.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="hero-button">
+              Explore my work
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.69L10.22 5.03a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.22-4.22H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg>
+            </a>
+            <a href="CV Mikhail Jonathan/Data Analyst Intern - Mikhail Jonathan.pdf" download="Data Analyst Intern - Mikhail Jonathan.pdf" class="hero-link">
+              Download CV
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.75 2.75a.75.75 0 0 0-1.5 0v7.69L6.53 7.72a.75.75 0 1 0-1.06 1.06l4 4a.75.75 0 0 0 1.06 0l4-4a.75.75 0 1 0-1.06-1.06l-2.72 2.72V2.75Z"/><path d="M3.5 13.25a.75.75 0 0 0-1.5 0v2A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2a.75.75 0 0 0-1.5 0v2c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2Z"/></svg>
+            </a>
+          </div>
+          <div class="hero-meta">
+            <span><i></i> Open to internship opportunities</span>
+            <span>Based in Indonesia</span>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-in" style="animation-delay: 0.15s" aria-label="Data analytics illustration">
+          <div class="orbit orbit-outer"></div>
+          <div class="orbit orbit-inner"></div>
+          <div class="orbit-cross orbit-cross-horizontal"></div>
+          <div class="orbit-cross orbit-cross-vertical"></div>
+          <svg class="orbit-connections" aria-hidden="true" focusable="false">
+            <path class="orbit-connection" data-connection="analyze"></path>
+            <path class="orbit-connection" data-connection="visualize"></path>
+            <path class="orbit-connection" data-connection="deliver"></path>
+            <path class="orbit-connection" data-connection="explore"></path>
+          </svg>
+          <div class="orbit-center">
+            <img src="Gambar/About Section/Foto Profil.jpg" alt="Mikhail Jonathan" />
+          </div>
+          <button type="button" class="orbit-card orbit-card-four" data-orbit="deliver" aria-pressed="false">
+            <svg class="orbit-card-border" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="1" y="1" width="98" height="48" rx="6" pathLength="100"></rect></svg>
+            <span class="orbit-card-index">04 / DELIVER</span>
+            <strong>Drive decisions</strong>
+            <span>Impact</span>
+          </button>
+          <button type="button" class="orbit-card orbit-card-three" data-orbit="visualize" aria-pressed="false">
+            <svg class="orbit-card-border" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="1" y="1" width="98" height="48" rx="6" pathLength="100"></rect></svg>
+            <span class="orbit-card-index">03 / VISUALIZE</span>
+            <strong>Make it clear</strong>
+            <span>Power BI · Tableau</span>
+          </button>
+          <button type="button" class="orbit-card orbit-card-two" data-orbit="analyze" aria-pressed="false">
+            <svg class="orbit-card-border" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="1" y="1" width="98" height="48" rx="6" pathLength="100"></rect></svg>
+            <span class="orbit-card-index">02 / ANALYZE</span>
+            <strong>Find the signal</strong>
+            <span>SQL &amp; Python</span>
+          </button>
+          <button type="button" class="orbit-card orbit-card-one" data-orbit="explore" aria-pressed="false">
+            <svg class="orbit-card-border" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true" focusable="false"><rect x="1" y="1" width="98" height="48" rx="6" pathLength="100"></rect></svg>
+            <span class="orbit-card-index">01 / EXPLORE</span>
+            <strong>Ask better questions</strong>
+            <span>Context</span>
+          </button>
+          <div class="orbit-detail" role="status" aria-live="polite">
+            <strong class="orbit-detail-title">Curiosity, backed by data.</strong>
+            <span class="orbit-detail-text">Hover over a step to see how I turn questions into useful insights.</span>
+          </div>
         </div>
       </div>
 
-      <!-- Profile Photo -->
-      <div class="order-1 md:order-2 flex justify-center fade-in" style="animation-delay: 0.2s">
-        <div class="relative">
-          <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400 to-teal-400 blur-2xl opacity-25 scale-110"></div>
-          <img src="Gambar/About Section/Foto Profil.jpg" alt="Profile Photo"
-            class="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-2xl" />
-          <!-- Floating badge -->
-          <span class="absolute -bottom-2 -right-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full px-3 py-1 text-xs font-semibold text-blue-600 dark:text-sky-400 shadow-md">
-            📊 Data Analyst
-          </span>
+      <div class="hero-toolstrip">
+        <span class="hero-toolstrip-label">Tools in my workflow</span>
+        <div class="hero-tools" aria-label="Tools: SQL, Python, Power BI, Tableau, Excel">
+          <span>SQL</span><b></b><span>Python</span><b></b><span>Power BI</span><b></b><span>Tableau</span><b></b><span>Excel</span>
         </div>
       </div>
     </div>
@@ -144,7 +185,7 @@
        ABOUT SECTION
   ============================================================ -->
   <section id="about" class="py-24 bg-white dark:bg-slate-800/40">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-24">
       <div class="text-center mb-14 fade-in">
         <span class="section-label">Get to Know Me</span>
         <h2 class="section-title">About Me</h2>
@@ -154,13 +195,13 @@
         <!-- Bio card -->
         <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-7 border border-slate-200 dark:border-slate-700 space-y-4">
           <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-            Hi, I'm <strong class="text-slate-800 dark:text-white">Jonathan</strong>, an <strong class="text-blue-600 dark:text-sky-400">Informatics Engineering</strong> student at <strong class="text-blue-600 dark:text-sky-400">Satya Wacana Christian University</strong> specializing in <strong class="text-teal-600 dark:text-teal-400">Data Science</strong>. I am passionate about the role of a <strong class="text-teal-600 dark:text-teal-400">Data Analyst</strong>, processing complex datasets, and transforming raw data into actionable insights to drive informed decision-making.
+            Hi, I'm <strong class="text-slate-800 dark:text-white">Jonathan</strong>, an <strong class="text-[#2f6690] dark:text-[#81c3d7]">Informatics Engineering</strong> student at <strong class="text-[#2f6690] dark:text-[#81c3d7]">Satya Wacana Christian University</strong> specializing in <strong class="text-[#2f6690] dark:text-[#81c3d7]">Data Science</strong>. I am passionate about the role of a <strong class="text-[#2f6690] dark:text-[#81c3d7]">Data Analyst</strong>, processing complex datasets, and transforming raw data into actionable insights to drive informed decision-making.
           </p>
           <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-            Equipped with a solid foundation in <strong class="text-blue-600 dark:text-sky-400">SQL</strong>, <strong class="text-blue-600 dark:text-sky-400">Python</strong>, <strong class="text-blue-600 dark:text-sky-400">R</strong>, and <strong class="text-teal-600 dark:text-teal-400">Cloud Data Warehousing</strong>, I enjoy combining analytical precision with structured problem-solving to build clean, efficient data solutions and interactive business dashboards.
+            Equipped with a solid foundation in <strong class="text-[#2f6690] dark:text-[#81c3d7]">SQL</strong>, <strong class="text-[#2f6690] dark:text-[#81c3d7]">Python</strong>, <strong class="text-[#2f6690] dark:text-[#81c3d7]">R</strong>, and <strong class="text-[#2f6690] dark:text-[#81c3d7]">Cloud Data Warehousing</strong>, I enjoy combining analytical precision with structured problem-solving to build clean, efficient data solutions and interactive business dashboards.
           </p>
           <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-            I am actively seeking <strong class="text-blue-600 dark:text-sky-400">Data Analyst internship</strong> opportunities starting next year, where I can apply my analytical capabilities, continue growing professionally, and deliver meaningful business value.
+            I am actively seeking <strong class="text-[#2f6690] dark:text-[#81c3d7]">Data Analyst internship</strong> opportunities starting next year, where I can apply my analytical capabilities, continue growing professionally, and deliver meaningful business value.
           </p>
         </div>
       </div>
@@ -171,7 +212,7 @@
        EDUCATION SECTION
   ============================================================ -->
   <section id="education" class="py-24 bg-white dark:bg-slate-800/40">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-24">
       <div class="text-center mb-14 fade-in">
         <span class="section-label">Academic Background</span>
         <h2 class="section-title">Education</h2>
@@ -183,17 +224,17 @@
         <div class="relative flex gap-5">
           <!-- Timeline dot -->
           <div class="flex flex-col items-center">
-            <div class="w-4 h-4 rounded-full bg-blue-600 dark:bg-sky-400 ring-4 ring-blue-100 dark:ring-sky-900 mt-1 shrink-0"></div>
+            <div class="w-4 h-4 rounded-full bg-[#2f6690] dark:bg-[#81c3d7] ring-4 ring-[#d9dcd6] dark:ring-[#0d2535] mt-1 shrink-0"></div>
             <div class="w-0.5 flex-1 bg-slate-200 dark:bg-slate-700 mt-2"></div>
           </div>
           <!-- Card -->
-          <div class="flex-1 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-6 hover:border-blue-300 dark:hover:border-sky-600 transition-colors duration-300">
+          <div class="flex-1 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-6 hover:border-[#81c3d7] dark:hover:border-[#81c3d7] transition-colors duration-300">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-lg text-slate-800 dark:text-white">Bachelor of Informatics Engineering</h3>
-                <p class="text-blue-600 dark:text-sky-400 font-semibold text-sm">Satya Wacana Christian University</p>
+                <p class="text-[#2f6690] dark:text-[#81c3d7] font-semibold text-sm">Satya Wacana Christian University</p>
               </div>
-              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-900/30 border border-teal-200 dark:border-teal-700 px-3 py-1 rounded-full self-start sm:self-auto shrink-0">
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#2f6690] dark:text-[#81c3d7] bg-[#f0f7fa] dark:bg-[#16425b]/30 border border-[#d9dcd6] dark:border-[#2f6690] px-3 py-1 rounded-full self-start sm:self-auto shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                 September 2023 — Present
               </span>
@@ -212,7 +253,7 @@
        ORGANIZATIONAL EXPERIENCE SECTION
   ============================================================ -->
   <section id="organization" class="py-24 bg-slate-50 dark:bg-slate-900">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-24">
       <div class="text-center mb-14 fade-in">
         <span class="section-label">Beyond the Classroom</span>
         <h2 class="section-title">Organizational Experience</h2>
@@ -223,27 +264,27 @@
         <!-- Org Item 1 (Placeholder) -->
         <div class="relative flex gap-5">
           <div class="flex flex-col items-center">
-            <div class="w-4 h-4 rounded-full bg-teal-500 dark:bg-teal-400 ring-4 ring-teal-100 dark:ring-teal-900 mt-1 shrink-0"></div>
+            <div class="w-4 h-4 rounded-full bg-[#3a7ca5] dark:bg-[#81c3d7] ring-4 ring-[#d9dcd6] dark:ring-[#0d2535] mt-1 shrink-0"></div>
             <div class="w-0.5 flex-1 bg-slate-200 dark:bg-slate-700 mt-2"></div>
           </div>
-          <div class="flex-1 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-6 hover:border-teal-300 dark:hover:border-teal-600 transition-colors duration-300">
+          <div class="flex-1 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-6 hover:border-[#81c3d7] dark:hover:border-[#3a7ca5] transition-colors duration-300">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-lg text-slate-800 dark:text-white">Equipment and Transportation Division Committee</h3>
-                <p class="text-teal-600 dark:text-teal-400 font-semibold text-sm">PURE: Seminar & Competition 2025</p>
+                <p class="text-[#2f6690] dark:text-[#81c3d7] font-semibold text-sm">PURE: Seminar & Competition 2025</p>
               </div>
-              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 dark:text-sky-300 bg-blue-50 dark:bg-sky-900/30 border border-blue-200 dark:border-sky-700 px-3 py-1 rounded-full self-start sm:self-auto shrink-0">
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#2f6690] dark:text-[#81c3d7] bg-[#f0f7fa] dark:bg-[#16425b]/30 border border-[#d9dcd6] dark:border-[#2f6690] px-3 py-1 rounded-full self-start sm:self-auto shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                 April 2025 — October 2025
               </span>
             </div>
             <ul class="mt-1 space-y-2 text-sm text-slate-500 dark:text-slate-400">
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Oversee and supply equipment and logistics essential for the seamless execution of seminars and competitions attended by 450 participants.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Coordinate with transportation and accommodation vendors to arrange lodging and travel schedules for speakers, judges, and invited guests.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Manage inventory tracking and distribution of event equipment, ensuring all tools, sound systems, and props are available and fully functional on-site.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Handle transportation logistics for event committees, guest speakers, and VIPs to ensure smooth mobility and timely arrival throughout the event.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Collaborate cross-functionally with other divisions to align logistics support with the overall event rundown and timeline requirements.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Conduct pre-event vendor negotiations and post-event inventory audits to ensure efficient resource allocation and budget adherence.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Oversee and supply equipment and logistics essential for the seamless execution of seminars and competitions attended by 450 participants.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Coordinate with transportation and accommodation vendors to arrange lodging and travel schedules for speakers, judges, and invited guests.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Manage inventory tracking and distribution of event equipment, ensuring all tools, sound systems, and props are available and fully functional on-site.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Handle transportation logistics for event committees, guest speakers, and VIPs to ensure smooth mobility and timely arrival throughout the event.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Collaborate cross-functionally with other divisions to align logistics support with the overall event rundown and timeline requirements.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Conduct pre-event vendor negotiations and post-event inventory audits to ensure efficient resource allocation and budget adherence.</li>
             </ul>
           </div>
         </div>
@@ -251,26 +292,26 @@
         <!-- Org Item 2 — FTI UKSW Basketball -->
         <div class="relative flex gap-5">
           <div class="flex flex-col items-center">
-            <div class="w-4 h-4 rounded-full bg-teal-500 dark:bg-teal-400 ring-4 ring-teal-100 dark:ring-teal-900 mt-1 shrink-0"></div>
+            <div class="w-4 h-4 rounded-full bg-[#3a7ca5] dark:bg-[#81c3d7] ring-4 ring-[#d9dcd6] dark:ring-[#0d2535] mt-1 shrink-0"></div>
             <div class="w-0.5 flex-1 bg-slate-200 dark:bg-slate-700 mt-2"></div>
           </div>
-          <div class="flex-1 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-6 hover:border-teal-300 dark:hover:border-teal-600 transition-colors duration-300">
+          <div class="flex-1 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-6 hover:border-[#81c3d7] dark:hover:border-[#3a7ca5] transition-colors duration-300">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-lg text-slate-800 dark:text-white">President</h3>
-                <p class="text-teal-600 dark:text-teal-400 font-semibold text-sm">FTI UKSW Basketball Student Activity Unit</p>
+                <p class="text-[#2f6690] dark:text-[#81c3d7] font-semibold text-sm">FTI UKSW Basketball Student Activity Unit</p>
               </div>
-              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 dark:text-sky-300 bg-blue-50 dark:bg-sky-900/30 border border-blue-200 dark:border-sky-700 px-3 py-1 rounded-full self-start sm:self-auto shrink-0">
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#2f6690] dark:text-[#81c3d7] bg-[#f0f7fa] dark:bg-[#16425b]/30 border border-[#d9dcd6] dark:border-[#2f6690] px-3 py-1 rounded-full self-start sm:self-auto shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                 February 2024 — January 2025
               </span>
             </div>
             <ul class="mt-1 space-y-2 text-sm text-slate-500 dark:text-slate-400">
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Served as the Head of the FTI Basketball Student Activity Unit (KBM Basket FTI) for the 2024 term, leading team members and coordinating internal organization strategies.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Planned, organized, and evaluated routine training schedules, team preparation, and sports programs to foster athletic discipline and teamwork.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Coordinated team preparation and participation in various inter-faculty and university-wide competitions to boost student achievements.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Collaborated closely with faculty authorities and student organizations (such as SMF FTI) to ensure the smooth execution of faculty-level sports events and foster good relationships.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Managed internal communications among members, successfully resolving group dynamics and strengthening overall team collaboration.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Served as the Head of the FTI Basketball Student Activity Unit (KBM Basket FTI) for the 2024 term, leading team members and coordinating internal organization strategies.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Planned, organized, and evaluated routine training schedules, team preparation, and sports programs to foster athletic discipline and teamwork.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Coordinated team preparation and participation in various inter-faculty and university-wide competitions to boost student achievements.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Collaborated closely with faculty authorities and student organizations (such as SMF FTI) to ensure the smooth execution of faculty-level sports events and foster good relationships.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Managed internal communications among members, successfully resolving group dynamics and strengthening overall team collaboration.</li>
             </ul>
           </div>
         </div>
@@ -278,26 +319,26 @@
         <!-- Org Item 3 — OMB UKSW 2026 -->
         <div class="relative flex gap-5">
           <div class="flex flex-col items-center">
-            <div class="w-4 h-4 rounded-full bg-teal-500 dark:bg-teal-400 ring-4 ring-teal-100 dark:ring-teal-900 mt-1 shrink-0"></div>
+            <div class="w-4 h-4 rounded-full bg-[#3a7ca5] dark:bg-[#81c3d7] ring-4 ring-[#d9dcd6] dark:ring-[#0d2535] mt-1 shrink-0"></div>
             <div class="w-0.5 flex-1 bg-slate-200 dark:bg-slate-700 mt-2"></div>
           </div>
-          <div class="flex-1 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-6 hover:border-teal-300 dark:hover:border-teal-600 transition-colors duration-300">
+          <div class="flex-1 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 mb-6 hover:border-[#81c3d7] dark:hover:border-[#3a7ca5] transition-colors duration-300">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-lg text-slate-800 dark:text-white">Facilitator</h3>
-                <p class="text-teal-600 dark:text-teal-400 font-semibold text-sm">New Student Orientation (OMB UKSW 2026)</p>
+                <p class="text-[#2f6690] dark:text-[#81c3d7] font-semibold text-sm">New Student Orientation (OMB UKSW 2026)</p>
               </div>
-              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 dark:text-sky-300 bg-blue-50 dark:bg-sky-900/30 border border-blue-200 dark:border-sky-700 px-3 py-1 rounded-full self-start sm:self-auto shrink-0">
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#2f6690] dark:text-[#81c3d7] bg-[#f0f7fa] dark:bg-[#16425b]/30 border border-[#d9dcd6] dark:border-[#2f6690] px-3 py-1 rounded-full self-start sm:self-auto shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                 July 2026 — September 2026
               </span>
             </div>
             <ul class="mt-1 space-y-2 text-sm text-slate-500 dark:text-slate-400">
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Served as a Facilitator for the Orientation and Introduction to Campus Life (OMB UKSW 2026), guiding and mentoring new students during their transition to university life.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Facilitated interactive group sessions and team-building activities, fostering camaraderie, teamwork, and positive character development among new students.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Delivered essential information regarding the academic environment, faculty regulations, and campus facilities to ensure seamless student adaptation.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Demonstrated active communication and problem-solving skills to support new students in addressing initial academic and social adjustment challenges.</li>
-              <li class="flex gap-2"><span class="text-teal-500 mt-0.5 shrink-0">▸</span>Managed group dynamics and maintained discipline throughout the orientation program, ensuring a welcoming, inclusive, and structured environment.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Served as a Facilitator for the Orientation and Introduction to Campus Life (OMB UKSW 2026), guiding and mentoring new students during their transition to university life.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Facilitated interactive group sessions and team-building activities, fostering camaraderie, teamwork, and positive character development among new students.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Delivered essential information regarding the academic environment, faculty regulations, and campus facilities to ensure seamless student adaptation.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Demonstrated active communication and problem-solving skills to support new students in addressing initial academic and social adjustment challenges.</li>
+              <li class="flex gap-2"><span class="text-[#2f6690] mt-0.5 shrink-0">▸</span>Managed group dynamics and maintained discipline throughout the orientation program, ensuring a welcoming, inclusive, and structured environment.</li>
             </ul>
           </div>
         </div>
@@ -311,13 +352,13 @@
        PROJECTS SECTION
   ============================================================ -->
   <section id="projects" class="py-24 bg-white dark:bg-slate-800/40">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-24">
       <div class="text-center mb-14 fade-in">
         <span class="section-label">What I've Built</span>
         <h2 class="section-title">Projects</h2>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 fade-in">
+      <div class="projects-grid grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 fade-in">
 
         <!-- Project Card 1 -->
         <article class="project-card cursor-pointer" data-project="1"
@@ -330,12 +371,12 @@
             <div class="flex items-center gap-2 flex-wrap">
               <span class="tag-badge">Sheets</span>
             </div>
-            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-sky-400 transition-colors">
+            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-[#2f6690] dark:group-hover:text-[#81c3d7] transition-colors">
               Retail Sales &amp; Profit Analysis
             </h3>
             <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
               End-to-end retail business performance analysis on 20 transaction records. Uncovered key profit drivers across product categories and store locations, providing actionable recommendations to optimize profit margins.            </p>
-            <button class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-sky-400 hover:underline mt-1">
+            <button class="inline-flex items-center gap-1 text-sm font-semibold text-[#2f6690] dark:text-[#81c3d7] hover:underline mt-1">
               View Details
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -355,13 +396,13 @@
               <span class="tag-badge">MySQL</span>
               <span class="tag-badge">Power BI</span>
             </div>
-            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-sky-400 transition-colors">
+            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-[#2f6690] dark:group-hover:text-[#81c3d7] transition-colors">
               E-Commerce Customer Churn Analysis
             </h3>
             <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
               Analyzed customer churn patterns in an e-commerce dataset, identifying key retention drivers and behavioral trends to support data-driven business decisions.
             </p>
-            <button class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-sky-400 hover:underline mt-1">
+            <button class="inline-flex items-center gap-1 text-sm font-semibold text-[#2f6690] dark:text-[#81c3d7] hover:underline mt-1">
               View Details
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -380,13 +421,13 @@
               <span class="tag-badge">Python</span>
               <span class="tag-badge">VS Code</span>
             </div>
-            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-sky-400 transition-colors">
+            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-[#2f6690] dark:group-hover:text-[#81c3d7] transition-colors">
               Netflix Movies &amp; TV Shows Content Analysis
             </h3>
             <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
               Explored Netflix's content library to uncover trends in genres, release years, and regional distribution through an interactive executive dashboard.
             </p>
-            <button class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-sky-400 hover:underline mt-1">
+            <button class="inline-flex items-center gap-1 text-sm font-semibold text-[#2f6690] dark:text-[#81c3d7] hover:underline mt-1">
               View Details
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -407,13 +448,13 @@
               <span class="tag-badge">RStudio</span>
               <span class="tag-badge">Tableau</span>
             </div>
-            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-sky-400 transition-colors">
+            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-[#2f6690] dark:group-hover:text-[#81c3d7] transition-colors">
               Global AI Adoption &amp; Workforce Impact Analysis
             </h3>
             <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
               Analyzed global AI adoption trends and workforce impact from 2020 to 2026, uncovering industry shifts, job displacement patterns, and productivity insights across regions.
             </p>
-            <button class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-sky-400 hover:underline mt-1">
+            <button class="inline-flex items-center gap-1 text-sm font-semibold text-[#2f6690] dark:text-[#81c3d7] hover:underline mt-1">
               View Details
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -432,13 +473,13 @@
               <span class="tag-badge">Sheets</span>
               <span class="tag-badge">Looker</span>
             </div>
-            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-sky-400 transition-colors">
+            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-[#2f6690] dark:group-hover:text-[#81c3d7] transition-colors">
               Retail Sales &amp; Customer Intelligence Dashboard
             </h3>
             <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
               An interactive business intelligence dashboard built to analyze multi-category retail transactions, tracking total revenue (454K+), sales volume, customer demographics by age groups, and monthly revenue trends to support data-driven retail decisions.
             </p>
-            <button class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-sky-400 hover:underline mt-1">
+            <button class="inline-flex items-center gap-1 text-sm font-semibold text-[#2f6690] dark:text-[#81c3d7] hover:underline mt-1">
               View Details
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -457,13 +498,13 @@
               <span class="tag-badge">Python</span>
               <span class="tag-badge">VS Code</span>
             </div>
-            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-sky-400 transition-colors">
+            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-[#2f6690] dark:group-hover:text-[#81c3d7] transition-colors">
               Supply Chain &amp; Inventory Analytics
             </h3>
             <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
               Processed raw transactional data using Python ETL pipelines to build a professional, single-screen executive supply chain dashboard. Features multi-metric proxy calculations, stockout analysis, logistics cost distribution, and fully interactive real-time filtering via Tailwind and Chart.js.
             </p>
-            <button class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-sky-400 hover:underline mt-1">
+            <button class="inline-flex items-center gap-1 text-sm font-semibold text-[#2f6690] dark:text-[#81c3d7] hover:underline mt-1">
               View Details
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -482,13 +523,13 @@
               <span class="tag-badge">Python</span>
               <span class="tag-badge">VS Code</span>
             </div>
-            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-sky-400 transition-colors">
+            <h3 class="font-bold text-lg text-slate-800 dark:text-white group-hover:text-[#2f6690] dark:group-hover:text-[#81c3d7] transition-colors">
               Spotify Audio Trends &amp; Popularity Dashboard
             </h3>
             <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
               Cleaned and preprocessed over 580,000 Spotify track records using Python scripts into structured JSON models. Built an interactive executive dashboard visualizing long-term audio feature trends, decade popularity patterns, and multi-metric correlations.
             </p>
-            <button class="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 dark:text-sky-400 hover:underline mt-1">
+            <button class="inline-flex items-center gap-1 text-sm font-semibold text-[#2f6690] dark:text-[#81c3d7] hover:underline mt-1">
               View Details
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -523,7 +564,7 @@
         <!-- Optional live link — shown only when the project has a URL -->
         <div id="modalLinkWrap" class="hidden pt-2">
           <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl transition-colors shadow">
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2f6690] hover:bg-[#16425b] text-white text-sm font-semibold rounded-xl transition-colors shadow">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7m0 0v7m0-7L10 14M5 5H3a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-2"/>
             </svg>
@@ -539,13 +580,13 @@
        SKILLS SECTION
   ============================================================ -->
   <section id="skills" class="py-24 bg-white dark:bg-slate-800/40">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-24">
       <div class="text-center mb-14 fade-in">
         <span class="section-label">What I Work With</span>
         <h2 class="section-title">Skills & Tools</h2>
       </div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 fade-in">
+      <div class="skills-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-5 fade-in">
 
         <!-- Baris 1: Core Programming & Querying -->
         <div class="skill-card group">
@@ -624,7 +665,7 @@
        CONTACT SECTION — Social Media Links
   ============================================================ -->
   <section id="contact" class="py-24 bg-slate-50 dark:bg-slate-900">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-24">
       <div class="text-center mb-14 fade-in">
         <span class="section-label">Let's Connect</span>
         <h2 class="section-title">Find Me On</h2>
@@ -697,13 +738,13 @@
        FOOTER
   ============================================================ -->
   <footer class="py-8 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500 dark:text-slate-400">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500 dark:text-slate-400">
       <img src="Gambar/Branding/MJMP.png" alt="MJMP" class="h-7 w-auto opacity-70" />
       <p class="text-center">© 2025 Mikhail Jonathan — Building solutions through data and code.</p>
       <div class="flex gap-4">
-        <a href="#about"    class="hover:text-blue-600 dark:hover:text-sky-400 transition-colors">About</a>
-        <a href="#skills"   class="hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Skills</a>
-        <a href="#projects" class="hover:text-blue-600 dark:hover:text-sky-400 transition-colors">Projects</a>
+        <a href="#about"    class="hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">About</a>
+        <a href="#skills"   class="hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-[#2f6690] dark:hover:text-[#81c3d7] transition-colors">Projects</a>
       </div>
     </div>
   </footer>
