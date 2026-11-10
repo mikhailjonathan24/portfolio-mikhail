@@ -270,6 +270,21 @@ const modalTitle     = document.getElementById('modalTitle');
 const modalLinkWrap  = document.getElementById('modalLinkWrap');
 const modalLink      = document.getElementById('modalLink');
 const modalLinkText  = document.getElementById('modalLinkText');
+const projectDisplayOrder = [7, 8, 10, 9, 3, 6, 4, 5, 2, 1];
+const projectGrid = document.querySelector('.projects-grid');
+
+if (projectGrid) {
+  const orderByProjectId = new Map(
+    projectDisplayOrder.map((projectId, index) => [String(projectId), index])
+  );
+  Array.from(projectGrid.querySelectorAll('.project-card'))
+    .sort((a, b) =>
+      (orderByProjectId.get(a.dataset.project) ?? Infinity) -
+      (orderByProjectId.get(b.dataset.project) ?? Infinity)
+    )
+    .forEach(card => projectGrid.appendChild(card));
+}
+
 const projectCards   = document.querySelectorAll('.project-card');
 
 /**
