@@ -664,6 +664,8 @@ body {
 
 /* ---------- Project Cards ---------- */
 .project-card {
+  display: flex;
+  flex-direction: column;
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
   border-radius: 1.25rem;
@@ -685,6 +687,17 @@ body {
   border-color: #81c3d7;
 }
 .project-card:hover .project-thumb { transform: scale(1.05); }
+.project-card > div:last-child {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+}
+.project-card > div:last-child > button {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
 
 /* ---------- Tag Badges (Project) ---------- */
 .tag-badge {
@@ -798,3 +811,22 @@ body {
 .dark .social-label { color: #94A3B8; }
 .social-card:hover .social-label { color: var(--accent-dark); }
 .dark .social-card:hover .social-label { color: #F1F5F9; }
+
+/* ---------- Print / PDF ---------- */
+@media print {
+  #navbar,
+  #projectModal {
+    display: none !important;
+  }
+
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .project-card,
+  .organization-entry {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
